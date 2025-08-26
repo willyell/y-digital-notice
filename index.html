@@ -59,14 +59,26 @@
 </head>
 <body>
   <div class="card">
-    <div class="logo">YourBrand</div>
+    <div class="logo" id="siteName">Website</div>
     <h1>We’ll be back soon</h1>
     <p>Thanks for visiting. This website is currently taking a short break while we refresh things behind the scenes.</p>
     <p>Please check back again later—we’ll be live shortly.</p>
-    <div class="footer">© <span id="year"></span> YourBrand. All rights reserved.</div>
+    <div class="footer">© <span id="year"></span> All rights reserved.</div>
   </div>
   <script>
+    // Replace "Website" with the referrer’s hostname if available
+    const ref = document.referrer;
+    if (ref) {
+      try {
+        const url = new URL(ref);
+        document.getElementById("siteName").textContent = url.hostname;
+      } catch(e) {
+        console.log("Couldn’t parse referrer", e);
+      }
+    }
+    // Year auto-update
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
+
