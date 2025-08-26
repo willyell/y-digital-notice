@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site Temporarily Unavailable</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #3b82f6, #9333ea);
+      color: #fff;
+      text-align: center;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      color: #111;
+      padding: 3rem 2rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+      max-width: 600px;
+      width: 90%;
+      animation: fadeIn 1s ease-out;
+    }
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 1rem;
+      color: #3b82f6;
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 1rem;
+      background: linear-gradient(90deg, #3b82f6, #9333ea);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 0.5rem 0;
+    }
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">YourBrand</div>
+    <h1>We’ll be back soon</h1>
+    <p>Thanks for visiting. This website is currently taking a short break while we refresh things behind the scenes.</p>
+    <p>Please check back again later—we’ll be live shortly.</p>
+    <div class="footer">© <span id="year"></span> YourBrand. All rights reserved.</div>
+  </div>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
